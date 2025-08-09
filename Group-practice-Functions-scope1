@@ -1,4 +1,4 @@
-Functions and Scope | Lesson 1
+/*Functions and Scope | Lesson 1
 Group Practice
 Instructions
 Objective:
@@ -34,4 +34,35 @@ function.
 ○ Each group presents their functions to the class, explaining their
 design choices and testing process.
 Submission
-Enter the url for the github repo in the field below and then press submit
+Enter the url for the github repo in the field below and then press submit*/
+//task1
+function greeting(username, userRole) {
+    return `Name: ${username}, Role: ${userRole}`;
+}
+
+console.log(greeting('Alexis', 'Student'));
+//task2
+function calculateCosts(numberOfAttendees, costPerAttendee) {
+    let total = numberOfAttendees * costPerAttendee;
+    if (numberOfAttendees > 100) {
+        total  *= 0.9;
+    }
+
+    return total;
+}
+
+console.log('Task Two: ')
+console.log(calculateCosts(120,25));
+
+//task3
+
+function emailValidator(email) 
+{
+    return email.includes("@") 
+    && email.includes(".") 
+    && !email.includes(" ") 
+    && email.lastIndexOf(".") > email.indexOf("@")
+}
+
+console.log('Task Three: ')
+console.log(emailValidator("mike.denney@cooldude.gg"))
